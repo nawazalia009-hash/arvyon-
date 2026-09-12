@@ -1,0 +1,1958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ARVYON - Digital Creative & Marketing Agency. We create powerful digital identities through creative content, strategic marketing and result-oriented solutions. Services include social media management, digital advertising, graphic design, video editing, and motion graphics.">
+    <meta name="keywords" content="Digital Creative Agency, Digital Marketing Agency, Social Media Management, Graphic Design, Video Editing, Motion Graphics, Google Ads, Meta Ads, Content Creation">
+    <meta name="author" content="ARVYON">
+    <meta property="og:title" content="ARVYON - Digital Creative & Marketing Agency">
+    <meta property="og:description" content="Transform your brand's digital presence. Creative • Digital • Growth">
+    <meta property="og:type" content="website">
+    <title>ARVYON - Digital Creative & Marketing Agency | Create. Connect. Grow.</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #0066FF;
+            --dark-bg: #0a0e27;
+            --dark-secondary: #1a1f3a;
+            --text-primary: #ffffff;
+            --text-secondary: #b0b3c1;
+            --accent-purple: #6366f1;
+            --glass-light: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, var(--dark-bg) 0%, #0f1535 100%);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(0, 102, 255, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(99, 102, 241, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* NAVIGATION */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            background: rgba(10, 14, 39, 0.7);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 1.2rem 2rem;
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            background: rgba(10, 14, 39, 0.95);
+            padding: 0.8rem 2rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            height: 45px;
+            display: flex;
+            align-items: center;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        .logo img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-blue);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-blue);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .cta-btn {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-purple) 100%);
+            color: white;
+            padding: 0.75rem 1.8rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 102, 255, 0.3);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(0, 102, 255, 0.4);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 6rem 2rem 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0, 102, 255, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 10s ease-in-out infinite reverse;
+        }
+
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            animation: slideInLeft 0.8s ease 0.2s both;
+        }
+
+        .hero-content .tagline {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            animation: slideInLeft 0.8s ease 0.4s both;
+        }
+
+        .hero-content p {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            max-width: 500px;
+            line-height: 1.8;
+            animation: slideInLeft 0.8s ease 0.6s both;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+            animation: slideInLeft 0.8s ease 0.8s both;
+        }
+
+        .hero-buttons .primary-btn {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-purple) 100%);
+            color: white;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 102, 255, 0.3);
+        }
+
+        .hero-buttons .primary-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 102, 255, 0.4);
+        }
+
+        .hero-buttons .secondary-btn {
+            background: transparent;
+            color: var(--primary-blue);
+            padding: 1rem 2.5rem;
+            border: 2px solid var(--primary-blue);
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .hero-buttons .secondary-btn:hover {
+            background: rgba(0, 102, 255, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .hero-trust {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            animation: slideInLeft 0.8s ease 1s both;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .hero-trust span {
+            color: var(--primary-blue);
+            font-weight: 600;
+        }
+
+        .hero-visual {
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: slideInRight 0.8s ease 0.4s both;
+        }
+
+        .creative-orb {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 30%, rgba(0, 102, 255, 0.2) 0%, transparent 50%);
+            border-radius: 50%;
+            animation: rotate 20s linear infinite;
+        }
+
+        .creative-elements {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+        }
+
+        .element {
+            position: absolute;
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            background: var(--glass-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: var(--text-secondary);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .element:nth-child(1) {
+            width: 180px;
+            height: 120px;
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .element:nth-child(2) {
+            width: 200px;
+            height: 140px;
+            top: 35%;
+            right: 5%;
+            animation-delay: 1s;
+        }
+
+        .element:nth-child(3) {
+            width: 160px;
+            height: 100px;
+            bottom: 20%;
+            left: 15%;
+            animation-delay: 2s;
+        }
+
+        .element:nth-child(4) {
+            width: 190px;
+            height: 130px;
+            bottom: 10%;
+            right: 10%;
+            animation-delay: 3s;
+        }
+
+        .element:nth-child(5) {
+            width: 170px;
+            height: 110px;
+            top: 50%;
+            left: 40%;
+            animation-delay: 1.5s;
+        }
+
+        /* ABOUT SECTION */
+        .about {
+            padding: 6rem 2rem;
+            background: linear-gradient(180deg, transparent 0%, rgba(99, 102, 241, 0.05) 100%);
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+            margin-bottom: 4rem;
+        }
+
+        .about-text h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-blue);
+        }
+
+        .about-text p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .about-highlight {
+            background: var(--glass-light);
+            border-left: 3px solid var(--primary-blue);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        .about-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .about-card {
+            background: var(--glass-light);
+            border: 1px solid var(--glass-border);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .about-card:hover {
+            background: rgba(0, 102, 255, 0.08);
+            border-color: var(--primary-blue);
+            transform: translateY(-5px);
+        }
+
+        .about-card h4 {
+            color: var(--primary-blue);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .about-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* SERVICES SECTION */
+        .services {
+            padding: 6rem 2rem;
+            position: relative;
+            z-index: 2;
+            background: linear-gradient(180deg, rgba(99, 102, 241, 0.05) 0%, transparent 100%);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: var(--glass-light);
+            border: 1px solid var(--glass-border);
+            padding: 2.5rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 102, 255, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .service-card:hover::before {
+            left: 100%;
+        }
+
+        .service-card:hover {
+            background: rgba(0, 102, 255, 0.12);
+            border-color: var(--primary-blue);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 102, 255, 0.15);
+        }
+
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-purple) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .service-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.8rem;
+        }
+
+        .service-features li {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .service-features li::before {
+            content: '✓';
+            color: var(--primary-blue);
+            font-weight: bold;
+        }
+
+        /* PORTFOLIO SECTION */
+        .portfolio {
+            padding: 6rem 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .portfolio-card {
+            background: var(--glass-light);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+            height: 350px;
+        }
+
+        .portfolio-card:hover {
+            border-color: var(--primary-blue);
+            transform: translateY(-10px);
+        }
+
+        .portfolio-image {
+            width: 100%;
+            height: 70%;
+            background: linear-gradient(135deg, rgba(0, 102, 255, 0.2) 0%, rgba(99, 102, 241, 0.2) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .portfolio-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .portfolio-card:hover .portfolio-image img {
+            transform: scale(1.05);
+        }
+
+        .portfolio-info {
+            padding: 1.5rem;
+            height: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .portfolio-category {
+            font-size: 0.8rem;
+            color: var(--primary-blue);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .portfolio-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: white;
+        }
+
+        /* WHY ARVYON SECTION */
+        .why-arvyon {
+            padding: 6rem 2rem;
+            background: linear-gradient(180deg, transparent 0%, rgba(0, 102, 255, 0.05) 100%);
+            position: relative;
+            z-index: 2;
+        }
+
+        .why-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .why-statement {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .why-statement h3 {
+            font-size: 1.3rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        .why-statement p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--glass-light);
+            border: 1px solid var(--glass-border);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            background: rgba(0, 102, 255, 0.1);
+            border-color: var(--primary-blue);
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-purple) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin: 0 auto 1.5rem;
+        }
+
+        .feature-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            color: white;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* PROCESS SECTION */
+        .process {
+            padding: 6rem 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .process-timeline {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .process-step {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+            align-items: start;
+            position: relative;
+        }
+
+        .process-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 75px;
+            top: 100px;
+            width: 2px;
+            height: 80px;
+            background: linear-gradient(180deg, var(--primary-blue) 0%, transparent 100%);
+        }
+
+        .process-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .process-number::after {
+            content: '';
+            width: 40px;
+            height: 2px;
+            background: var(--primary-blue);
+        }
+
+        .process-content h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        .process-content p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* WHO WE WORK WITH SECTION */
+        .clients {
+            padding: 6rem 2rem;
+            background: linear-gradient(180deg, rgba(0, 102, 255, 0.05) 0%, transparent 100%);
+            position: relative;
+            z-index: 2;
+        }
+
+        .clients-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .client-category {
+            background: var(--glass-light);
+            border: 1px solid var(--glass-border);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .client-category:hover {
+            background: rgba(0, 102, 255, 0.12);
+            border-color: var(--primary-blue);
+            transform: translateY(-5px);
+        }
+
+        .client-category p {
+            font-size: 1rem;
+            font-weight: 600;
+            color: white;
+        }
+
+        /* VISION & MISSION */
+        .vision-mission {
+            padding: 6rem 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .vm-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .vm-card {
+            background: var(--glass-light);
+            border: 1px solid var(--glass-border);
+            padding: 3rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .vm-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-blue);
+        }
+
+        .vm-card p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .vision-quote {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 3rem;
+            background: linear-gradient(135deg, rgba(0, 102, 255, 0.1) 0%, rgba(99, 102, 241, 0.1) 100%);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            margin-top: 2rem;
+        }
+
+        .vision-quote p {
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
+            line-height: 1.4;
+            margin-bottom: 1rem;
+        }
+
+        .vision-quote span {
+            color: var(--primary-blue);
+        }
+
+        /* CTA SECTION */
+        .full-cta {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, rgba(0, 102, 255, 0.15) 0%, rgba(99, 102, 241, 0.15) 100%);
+            border-top: 1px solid var(--glass-border);
+            border-bottom: 1px solid var(--glass-border);
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .full-cta h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .full-cta p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-buttons button {
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .cta-buttons .primary-btn {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-purple) 100%);
+            color: white;
+            box-shadow: 0 10px 30px rgba(0, 102, 255, 0.3);
+        }
+
+        .cta-buttons .primary-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 102, 255, 0.4);
+        }
+
+        .cta-buttons .secondary-btn {
+            background: transparent;
+            color: var(--primary-blue);
+            border: 2px solid var(--primary-blue);
+        }
+
+        .cta-buttons .secondary-btn:hover {
+            background: rgba(0, 102, 255, 0.1);
+            transform: translateY(-3px);
+        }
+
+        /* CONTACT SECTION */
+        .contact {
+            padding: 6rem 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-item {
+            background: var(--glass-light);
+            border: 1px solid var(--glass-border);
+            padding: 1.5rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: rgba(0, 102, 255, 0.1);
+            border-color: var(--primary-blue);
+        }
+
+        .contact-item h4 {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.8rem;
+        }
+
+        .contact-item a, .contact-item p {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: var(--accent-purple);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            width: 45px;
+            height: 45px;
+            background: var(--glass-light);
+            border: 1px solid var(--glass-border);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .social-links a:hover {
+            background: rgba(0, 102, 255, 0.2);
+            border-color: var(--primary-blue);
+            color: var(--primary-blue);
+        }
+
+        .contact-form {
+            background: var(--glass-light);
+            border: 1px solid var(--glass-border);
+            padding: 2.5rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.9rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            border-radius: 10px;
+            color: white;
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            background: rgba(0, 102, 255, 0.1);
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 15px rgba(0, 102, 255, 0.2);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-purple) 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 102, 255, 0.3);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(0, 102, 255, 0.4);
+        }
+
+        /* FOOTER */
+        footer {
+            background: rgba(10, 14, 39, 0.8);
+            border-top: 1px solid var(--glass-border);
+            padding: 3rem 2rem 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            color: white;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-blue);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--glass-border);
+            padding-top: 2rem;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        .footer-logo {
+            height: 40px;
+            margin-bottom: 1rem;
+        }
+
+        .footer-logo img {
+            height: 100%;
+            width: auto;
+        }
+
+        /* ANIMATIONS */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(20px);
+            }
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 1024px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .vm-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero {
+                padding: 5rem 1.5rem 2rem;
+                min-height: auto;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content p {
+                font-size: 0.95rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .hero-buttons button {
+                width: 100%;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .full-cta h2 {
+                font-size: 1.8rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .cta-buttons button {
+                width: 100%;
+            }
+
+            .vision-quote p {
+                font-size: 1.5rem;
+            }
+
+            .about-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .process-step {
+                grid-template-columns: 100px 1fr;
+                gap: 1.5rem;
+            }
+
+            .process-number {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 14px;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 4rem 1rem 1rem;
+            }
+
+            .hero-content h1 {
+                font-size: 1.5rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.5rem;
+            }
+
+            .service-card {
+                padding: 1.5rem;
+            }
+
+            .about-card {
+                padding: 1.5rem;
+            }
+
+            .portfolio-card {
+                height: 300px;
+            }
+
+            .full-cta {
+                padding: 3rem 1rem;
+            }
+
+            .full-cta h2 {
+                font-size: 1.3rem;
+            }
+
+            .contact-form {
+                padding: 1.5rem;
+            }
+
+            .vision-quote p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav>
+        <nav-container>
+            <div class="logo">
+                <img src="/mnt/user-data/uploads/WhatsApp_Image_2026-09-11_at_23_05_01.jpeg" alt="ARVYON Logo">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Work</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#why">Why ARVYON</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="cta-btn">Let's Work Together</button>
+            <button class="mobile-menu-btn">☰</button>
+        </nav-container>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="logo" style="margin-bottom: 2rem; animation: fadeInDown 0.8s ease;">
+                    <img src="/mnt/user-data/uploads/WhatsApp_Image_2026-09-11_at_23_05_01.jpeg" alt="ARVYON" style="height: 50px;">
+                </div>
+                <h1>We Create. We Manage. We Grow.</h1>
+                <p class="tagline">Digital Creative & Marketing Agency</p>
+                <p>ARVYON helps businesses, brands, creators and organizations build powerful digital identities through creative content, strategic marketing and result-oriented digital solutions.</p>
+                <div class="hero-buttons">
+                    <button class="primary-btn">Start a Project</button>
+                    <button class="secondary-btn">Explore Our Services</button>
+                </div>
+                <div class="hero-trust">
+                    <span>✓ Creative • Digital • Growth</span>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="creative-orb"></div>
+                <div class="creative-elements">
+                    <div class="element">🎨 Design</div>
+                    <div class="element">🎬 Video</div>
+                    <div class="element">📱 Social</div>
+                    <div class="element">💡 Strategy</div>
+                    <div class="element">✨ Graphics</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>More Than Just Digital Content.</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Full-Service Digital Solutions</h3>
+                    <p>ARVYON is a full-service digital creative and marketing agency focused on creating, managing and growing brands in the digital world.</p>
+                    <p>We don't just help businesses post on social media. We work on your complete digital identity, content strategy, advertising and online growth.</p>
+                    <p>From creative graphic designs and professional video editing to Google & Meta advertising, social media management, motion graphics and documentary-style videos, ARVYON provides multiple digital solutions under one roof.</p>
+                    <div class="about-highlight">
+                        <strong>Your vision, our creativity, your growth.</strong>
+                    </div>
+                </div>
+                <div class="about-cards">
+                    <div class="about-card">
+                        <h4>Creative Solutions</h4>
+                        <p>Premium graphic design, motion graphics and visual content that makes your brand stand out.</p>
+                    </div>
+                    <div class="about-card">
+                        <h4>Digital Marketing</h4>
+                        <p>Strategic Google Ads, Meta advertising and performance-driven campaigns.</p>
+                    </div>
+                    <div class="about-card">
+                        <h4>Content Production</h4>
+                        <p>Professional video editing, reels, short-form and long-form content creation.</p>
+                    </div>
+                    <div class="about-card">
+                        <h4>Growth Strategy</h4>
+                        <p>Data-driven strategies to help your brand build visibility, engagement and scale.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="services" id="services">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>What We Do</h2>
+                <p>Everything your brand needs to build, manage and grow its digital presence.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Social Media Management</h3>
+                    <p>Complete social media strategy and management for Instagram, Facebook and more.</p>
+                    <ul class="service-features">
+                        <li>Instagram Management</li>
+                        <li>Facebook Management</li>
+                        <li>Content Strategy</li>
+                        <li>Content Planning</li>
+                        <li>Post & Reel Management</li>
+                        <li>Audience Engagement</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>Digital Advertising</h3>
+                    <p>Performance-driven advertising campaigns across Google and Meta platforms.</p>
+                    <ul class="service-features">
+                        <li>Google Ads</li>
+                        <li>Meta Ads (Facebook, Instagram)</li>
+                        <li>Lead Generation</li>
+                        <li>Brand Awareness</li>
+                        <li>Traffic Campaigns</li>
+                        <li>Retargeting</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>Graphic Design</h3>
+                    <p>Creative and professional graphic design for all your digital needs.</p>
+                    <ul class="service-features">
+                        <li>Social Media Posts</li>
+                        <li>Brand Creatives</li>
+                        <li>Promotional Posters</li>
+                        <li>Advertisements</li>
+                        <li>Event Posters</li>
+                        <li>Marketing Materials</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🎬</div>
+                    <h3>Video Editing</h3>
+                    <p>Professional video editing for reels, YouTube, and promotional content.</p>
+                    <ul class="service-features">
+                        <li>Instagram Reels</li>
+                        <li>YouTube Videos</li>
+                        <li>Promotional Videos</li>
+                        <li>Short-form Content</li>
+                        <li>Long-form Videos</li>
+                        <li>Product Videos</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">✨</div>
+                    <h3>Motion Graphics</h3>
+                    <p>Animated content and motion graphics that capture attention and convey messages.</p>
+                    <ul class="service-features">
+                        <li>Animated Posts</li>
+                        <li>Logo Animation</li>
+                        <li>Text Animation</li>
+                        <li>Explainer Videos</li>
+                        <li>Ad Animations</li>
+                        <li>Motion Design</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📹</div>
+                    <h3>Documentary & Professional Video</h3>
+                    <p>Cinematic storytelling and professional video production for brands and organizations.</p>
+                    <ul class="service-features">
+                        <li>Documentary Videos</li>
+                        <li>Brand Stories</li>
+                        <li>Corporate Videos</li>
+                        <li>Event Videos</li>
+                        <li>Interview Content</li>
+                        <li>Promotional Films</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section class="portfolio" id="portfolio">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Creative Work. Digital Impact.</h2>
+                <p>Portfolio of our premium creative and marketing projects.</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <span>Graphic Design Project</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <div class="portfolio-category">Graphic Design</div>
+                        <div class="portfolio-title">Brand Campaign</div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <span>Video Editing Project</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <div class="portfolio-category">Video Editing</div>
+                        <div class="portfolio-title">Promotional Reel</div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <span>Social Media Project</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <div class="portfolio-category">Social Media</div>
+                        <div class="portfolio-title">Content Strategy</div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <span>Motion Graphics Project</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <div class="portfolio-category">Motion Graphics</div>
+                        <div class="portfolio-title">Animated Campaign</div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <span>Documentary Project</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <div class="portfolio-category">Documentary</div>
+                        <div class="portfolio-title">Brand Story</div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <span>Advertising Project</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <div class="portfolio-category">Advertising</div>
+                        <div class="portfolio-title">Digital Campaign</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY ARVYON SECTION -->
+    <section class="why-arvyon" id="why">
+        <div class="section-container">
+            <div class="why-content">
+                <div class="why-statement">
+                    <h3>Why ARVYON?</h3>
+                    <h2 style="font-size: 2.2rem; margin-bottom: 1.5rem;">One Agency. Multiple Digital Solutions.</h2>
+                    <p>Instead of hiring different people for designing, video editing, advertising and social media management, clients can get their complete digital content and marketing support from ARVYON.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">💡</div>
+                        <h4>Creativity</h4>
+                        <p>Creative ideas that make brands stand out in a competitive digital landscape.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h4>Strategy</h4>
+                        <p>Every creative decision is backed by a clear digital strategy and data insights.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⭐</div>
+                        <h4>Quality</h4>
+                        <p>Professional design, editing and content production that reflects excellence.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔗</div>
+                        <h4>Consistency</h4>
+                        <p>Consistent branding across every digital touchpoint for strong brand identity.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📈</div>
+                        <h4>Growth</h4>
+                        <p>Solutions designed to help businesses build visibility, engagement and sustainable growth.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS SECTION -->
+    <section class="process" id="process">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>How We Work</h2>
+                <p>Our proven process for delivering exceptional results.</p>
+            </div>
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="process-number">01</div>
+                    <div class="process-content">
+                        <h4>DISCOVER</h4>
+                        <p>We understand your brand, audience, goals and vision. Through detailed consultation and research, we get to know your business deeply to create tailored solutions.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">02</div>
+                    <div class="process-content">
+                        <h4>STRATEGIZE</h4>
+                        <p>We build a comprehensive creative and digital strategy aligned with your business objectives and target audience, ensuring every action has a clear purpose.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">03</div>
+                    <div class="process-content">
+                        <h4>CREATE</h4>
+                        <p>Our team designs, edits and produces high-quality content and campaigns. From graphics to videos to advertisements, we bring your strategy to life.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">04</div>
+                    <div class="process-content">
+                        <h4>LAUNCH</h4>
+                        <p>We publish campaigns and digital content across the right channels at the right time to maximize reach, engagement and impact.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">05</div>
+                    <div class="process-content">
+                        <h4>GROW</h4>
+                        <p>We analyze performance, track key metrics and optimize continuously to improve results and help your business achieve sustainable growth.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHO WE WORK WITH SECTION -->
+    <section class="clients">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Built For Ambitious Brands.</h2>
+                <p>We work with diverse clients across multiple industries.</p>
+            </div>
+            <div class="clients-grid">
+                <div class="client-category">
+                    <p>🏢 Businesses</p>
+                </div>
+                <div class="client-category">
+                    <p>🛍️ E-commerce Brands</p>
+                </div>
+                <div class="client-category">
+                    <p>🏨 Hotels & Restaurants</p>
+                </div>
+                <div class="client-category">
+                    <p>⚕️ Hospitals & Clinics</p>
+                </div>
+                <div class="client-category">
+                    <p>👤 Professionals</p>
+                </div>
+                <div class="client-category">
+                    <p>📚 Educational Institutes</p>
+                </div>
+                <div class="client-category">
+                    <p>🏪 Local Businesses</p>
+                </div>
+                <div class="client-category">
+                    <p>⭐ Personal Brands</p>
+                </div>
+                <div class="client-category">
+                    <p>🎬 Content Creators</p>
+                </div>
+                <div class="client-category">
+                    <p>🚀 Startups</p>
+                </div>
+                <div class="client-category">
+                    <p>🏛️ Companies & Organizations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VISION & MISSION SECTION -->
+    <section class="vision-mission">
+        <div class="section-container">
+            <div class="vm-grid">
+                <div class="vm-card">
+                    <h3>Our Vision</h3>
+                    <p>To build ARVYON as a trusted digital creative and marketing agency that helps businesses transform their ideas into powerful digital experiences. We aim to combine creative design, technology and digital marketing to help brands stand out in an increasingly competitive online world.</p>
+                </div>
+                <div class="vm-card">
+                    <h3>Our Mission</h3>
+                    <p>Our mission is to help businesses establish a strong digital presence through creative content, strategic marketing and result-oriented digital solutions. We empower brands to connect authentically with their audience and achieve sustainable growth in the digital landscape.</p>
+                </div>
+                <div class="vision-quote">
+                    <p><span>Your vision.</span><br><span>Our creativity.</span><br><span>Your growth.</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FULL CTA SECTION -->
+    <section class="full-cta">
+        <h2>Ready to Build Something Remarkable?</h2>
+        <p>Let's turn your ideas into digital experiences that people remember.</p>
+        <div class="cta-buttons">
+            <button class="primary-btn">Start a Project</button>
+            <button class="secondary-btn">Talk to ARVYON</button>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Let's Create Something Great.</h2>
+                <p>Get in touch with ARVYON today and let's start building your digital success story.</p>
+            </div>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h4>Email</h4>
+                    <a href="mailto:hello@arvyon.com">hello@arvyon.com</a>
+                </div>
+                <div class="contact-item">
+                    <h4>Phone</h4>
+                    <p>+91 [Your Contact Number]</p>
+                </div>
+                <div class="contact-item">
+                    <h4>Location</h4>
+                    <p>[Your City, Country]</p>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <form onsubmit="handleSubmit(event)">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company / Brand</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Required *</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select a service</option>
+                            <option value="social">Social Media Management</option>
+                            <option value="google-ads">Google Ads</option>
+                            <option value="meta-ads">Meta Ads</option>
+                            <option value="design">Graphic Design</option>
+                            <option value="video">Video Editing</option>
+                            <option value="motion">Motion Graphics</option>
+                            <option value="documentary">Documentary Production</option>
+                            <option value="digital-marketing">Digital Marketing</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="details">Project Details *</label>
+                        <textarea id="details" name="details" required placeholder="Tell us about your project..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Project Inquiry</button>
+                </form>
+            </div>
+
+            <div class="social-links" style="margin-top: 3rem;">
+                <a href="#" title="Instagram">📷</a>
+                <a href="#" title="Facebook">f</a>
+                <a href="#" title="YouTube">▶</a>
+                <a href="#" title="LinkedIn">in</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="/mnt/user-data/uploads/WhatsApp_Image_2026-09-11_at_23_05_01.jpeg" alt="ARVYON">
+                </div>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">Digital Creative & Marketing Agency</p>
+                <p style="color: var(--primary-blue); font-weight: 600; margin-top: 1rem;">Create. Connect. Grow.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Work</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#services">Social Media Management</a></li>
+                    <li><a href="#services">Digital Marketing</a></li>
+                    <li><a href="#services">Graphic Design</a></li>
+                    <li><a href="#services">Video Editing</a></li>
+                    <li><a href="#services">Motion Graphics</a></li>
+                    <li><a href="#services">Documentary Production</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 ARVYON. All Rights Reserved. | Digital Creative & Marketing Agency</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Form submission handler
+        function handleSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
+            const formData = new FormData(form);
+            
+            // Create email content
+            const emailContent = `
+New Project Inquiry from ARVYON Website:
+
+Name: ${formData.get('name')}
+Email: ${formData.get('email')}
+Phone: ${formData.get('phone') || 'Not provided'}
+Company: ${formData.get('company') || 'Not provided'}
+Service: ${formData.get('service')}
+Details: ${formData.get('details')}
+            `;
+            
+            // In a real implementation, send to your backend
+            alert('Thank you for your inquiry! We will get back to you soon.');
+            form.reset();
+        }
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInDown 0.6s ease forwards';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section-header, .service-card, .portfolio-card, .feature-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Button click effects
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mouseenter', function() {
+                this.style.transition = 'all 0.3s ease';
+            });
+        });
+    </script>
+</body>
+</html>
